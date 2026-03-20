@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bola do Desestresse</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #141e30, #243b55);
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .sim {
+      background: #00c853;
+    }
+
+    .nao {
+      background: #d32f2f;
+    }
+
+    #canvas-container {
+      display: none;
+    }
+
+    .texto {
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container" id="inicio">
+
+  <h1>🔴 Bola do Desestresse</h1>
+
+  <p><b>Você deseja desestressar com o grito?</b></p>
+
+  <button class="sim" onclick="iniciar()">Sim</button>
+  <button class="nao" onclick="naoIniciar()">Não</button>
+
+  <p class="texto">
+    Gritar pode desestressar temporariamente ao ativar o sistema límbico e liberar
+    neurotransmissores que aliviam a tensão acumulada, agindo como uma catarse emocional.
+    <br><br>
+    No entanto, a prática exagerada pode aumentar o estresse e causar lesões nas pregas vocais,
+    tornando o método conturbado e não um substituto para terapia profissional.
+    <br><br>
+    <b>Use com moderação.</b>
+  </p>
+
+</div>
+
+<div id="canvas-container"></div>
+
+<script src="meu-projeto-p5-v2.js"></script>
+
+<script>
+function iniciar() {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById("canvas-container").style.display = "block";
+  startApp();
+}
+
+function naoIniciar() {
+  alert("Tudo bem 🙂 Cuide-se.");
+}
+</script>
+
+</body>
+</html>
