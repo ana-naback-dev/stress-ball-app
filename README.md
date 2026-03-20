@@ -1,5 +1,8 @@
 # Stress Ball App 🎯
 
+## 🚀 Acesse o projeto
+
+👉 https://ana-naback-dev.github.io/stress-ball-app/
 Interactive application designed to help users relieve stress through a virtual stress ball.
 
 ## 🚀 Features
