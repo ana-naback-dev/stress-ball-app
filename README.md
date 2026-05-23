@@ -28,8 +28,7 @@ Project goal
 
 This project was created to practice web development concepts and user interaction.
 
-## 📌 Author
+Author
 
 Developed by Ana
 
-Developed by Ana
