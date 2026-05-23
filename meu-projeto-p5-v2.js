@@ -37,7 +37,7 @@ function draw() {
 
   vol = mic.getLevel();
 
-  // 🔒 REDUÇÃO DE SENSIBILIDADE (ESSENCIAL)
+  // REDUÇÃO DE SENSIBILIDADE (ESSENCIAL)
   if (vol < 0.03) vol = 0;
 
   smoothVol = lerp(smoothVol, vol, 0.05);
@@ -45,11 +45,11 @@ function draw() {
   let base = min(width, height);
   let maxSize = base * 0.6;
 
-  // 🎯 NORMALIZAÇÃO MAIS EXIGENTE
+  // NORMALIZAÇÃO MAIS EXIGENTE
   let intensidade = map(smoothVol, 0.03, 0.15, 0, 1);
   intensidade = constrain(intensidade, 0, 1);
 
-  // 🎯 ENERGIA MAIS LENTA (IMPORTANTE)
+  // ENERGIA MAIS LENTA (IMPORTANTE)
   if (intensidade > 0.4) {
     energia += intensidade * 0.03; // bem mais lento
   } else {
@@ -58,7 +58,7 @@ function draw() {
 
   energia = constrain(energia, 0, 1);
 
-  // 🎯 TAMANHO BASEADO NA ENERGIA
+  // TAMANHO BASEADO NA ENERGIA
   let size = map(energia, 0, 1, 50, maxSize);
 
   let cor = lerpColor(color(200, 220, 255), color(255, 0, 0), energia);
@@ -67,7 +67,7 @@ function draw() {
     fill(cor);
     ellipse(width / 2, height / 2, size, size);
 
-    // 💥 EXPLOSÃO CONTROLADA
+    // EXPLOSÃO CONTROLADA
     if (energia > 0.97 && intensidade > 0.5) {
       explodir();
     }
